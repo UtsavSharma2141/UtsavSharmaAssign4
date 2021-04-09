@@ -5,7 +5,7 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Help</string>
+    <string name="action_settings">Location</string>
     <string name="builder_exit_message">(Utsav Sharma N01392141) Do You want to exit from the app? </string>
     <string name="yes_msg">Yes</string>
     <string name="no_msg">No</string>
@@ -13,6 +13,9 @@
     <string name="website1">https://humber.ca/</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Download</string>
+    <string name="menu_slideshow">WebService</string>
+    <string name="full_name">tvUtsavSharma</string>
+    <string name="student_id">tvN01392141</string>
+    <string name="fgdf">This is snackbar</string>
 </resources>
