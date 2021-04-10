@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import utsav.sharma.n01392141.R;
 
-public class SlideshowFragment extends Fragment {
+public class WebServiceFrag extends Fragment {
 
     private SlideshowViewModel slideshowViewModel;
 

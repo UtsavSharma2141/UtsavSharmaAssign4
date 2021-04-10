@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import utsav.sharma.n01392141.R;
 
-public class GalleryFragment extends Fragment {
+public class DownloadFrag extends Fragment {
 
     private GalleryViewModel galleryViewModel;
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/MichaelHomeFragLayout"
+    android:id="@+id/utsavHomeFragLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/holo_green_light"
+    android:background="@color/lightgreen"
     android:padding="10dp">
 
     <TextView
@@ -13,37 +13,38 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/full_name" />
+        android:text="@string/full_name"
+        android:paddingLeft="85dp"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
 
     <TextView
         android:id="@+id/utsavhometv2"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/student_id" />
+        android:text="@string/student_id"
+        android:paddingLeft="85dp"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
 
+    <TextView
+        android:id="@+id/utsavhometv3"
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:paddingLeft="120dp"
+        android:paddingTop="150dp"
+        android:textSize="30dp"/>
 
-        <TextView
-            android:id="@+id/utsavCurrentDateTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal"
-            android:paddingBottom="40dp" />
+    <TextView
+        android:id="@+id/utsavhometv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:paddingLeft="120dp"
+        android:paddingTop="150dp"
+        android:textSize="30dp"/>
 
-        <TextClock
-            android:id="@+id/utsavTextClock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:format12Hour="hh:mm:ss a"
-            android:gravity="center_horizontal" />
-    </FrameLayout>
 </LinearLayout>

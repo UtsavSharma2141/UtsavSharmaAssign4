@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/utsavsettingfrag"
+    tools:context=".SettingFragment"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please select colour to change the background of Home"
+        android:paddingLeft="20dp"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:textColor="#FF0000"
+        />
+
+    <Button
+        android:id="@+id/utsav_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="White"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        />
+    <Button
+        android:id="@+id/utsav_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purple"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        />
+
+    <Button
+        android:id="@+id/utsav_btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teal"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+
+</LinearLayout>
