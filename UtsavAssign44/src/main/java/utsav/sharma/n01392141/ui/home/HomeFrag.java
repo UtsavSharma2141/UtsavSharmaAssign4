@@ -51,16 +51,5 @@ public class HomeFrag extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public void whiteColour(View v) {
-        view.setBackgroundResource(R.color.white);
 
-    }
-    public void purpleColour(View v) {
-        view.setBackgroundResource(R.color.purple_200);
-
-    }
-    public void tealColour(View v) {
-        view.setBackgroundResource(R.color.teal_200);
-
-    }
 }

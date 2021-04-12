@@ -12,6 +12,7 @@
     <string name="help_website">Help website</string>
     <string name="website1">https://humber.ca/</string>
     <color name="lightgreen">#90EE90</color>
+    <color name="yellow">#FFFFE0</color>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Download</string>
@@ -19,7 +20,12 @@
     <string name="full_name">tvUtsavSharma</string>
     <string name="student_id">tvN01392141</string>
     <string name="fgdf">This is snackbar</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu_setting">Settings</string>
+
+    <string-array name="names">
+        <item>Flower</item>
+        <item>Nature</item>
+        <item>Sky</item>
+    </string-array>
 </resources>

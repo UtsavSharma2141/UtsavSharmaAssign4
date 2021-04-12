@@ -61,6 +61,7 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
+
         });
         @SuppressLint("CutPasteId") DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -73,6 +74,8 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
     }
 
     @Override
@@ -83,7 +86,7 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
                 .setPositiveButton(R.string.yes_msg, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        UtsavActivity.super.onBackPressed();
+                        UtsavActivity.super.finish();
                     }
                 })
 

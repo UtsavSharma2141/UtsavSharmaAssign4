@@ -1,5 +1,6 @@
 package utsav.sharma.n01392141;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import utsav.sharma.n01392141.ui.home.HomeFrag;
@@ -25,14 +27,21 @@ import utsav.sharma.n01392141.ui.slideshow.SlideshowViewModel;
 public class SettingFragment extends Fragment {
 
     private SettingViewModel settingViewModel;
+    View view;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         settingViewModel =
                 new ViewModelProvider(this).get(SettingViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_setting, container, false);
         return root;
 
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+        super.onViewCreated(view, savedInstanceState);
+    }
 }
