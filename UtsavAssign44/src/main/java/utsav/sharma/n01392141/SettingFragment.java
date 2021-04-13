@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -28,6 +29,7 @@ public class SettingFragment extends Fragment {
 
     private SettingViewModel settingViewModel;
     View view;
+    Button button;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -41,7 +43,42 @@ public class SettingFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        Fragment fragment = (Fragment) getFragmentManager().findFragmentById(R.id.nav_setting);
+        button = view.findViewById(R.id.utsav_btn1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.setBackgroundResource(R.color.red);
+            }
+        });
+
+        button= view.findViewById(R.id.utsav_btn2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.setBackgroundResource(R.color.purple);
+            }
+        });
+
+        button= view.findViewById(R.id.utsav_btn3);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.setBackgroundResource(R.color.gray);
+            }
+        });
 
         super.onViewCreated(view, savedInstanceState);
+    }
+
+    public void goRed(){
+        view.setBackgroundResource(R.color.red);
+    }
+    public void goPurple(){
+        view.setBackgroundResource(R.color.purple);
+    }
+
+    public void goGray(){
+        view.setBackgroundResource(R.color.gray);
     }
 }

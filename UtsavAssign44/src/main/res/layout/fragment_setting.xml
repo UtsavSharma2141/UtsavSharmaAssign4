@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please select colour to change the background of Home"
+        android:text="Please select colour to change the background"
         android:paddingLeft="20dp"
         android:textStyle="italic"
         android:textSize="15dp"
@@ -20,7 +20,7 @@
         android:id="@+id/utsav_btn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="White"
+        android:text="Red"
         android:textStyle="bold"
         android:textColor="@color/black"
 
@@ -39,7 +39,7 @@
         android:id="@+id/utsav_btn3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Teal"
+        android:text="Gray"
         android:textStyle="bold"
         android:textColor="@color/black"
         />

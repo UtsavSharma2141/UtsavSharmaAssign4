@@ -134,6 +134,7 @@ public class DownloadFrag extends Fragment {
 
             }
         });
+
     }
 
 
@@ -219,6 +220,8 @@ public class DownloadFrag extends Fragment {
                 Log.i("Info", "Path: " + path);
             }
         }
+
+
 
     }
 
