@@ -44,6 +44,7 @@ import utsav.sharma.n01392141.ui.home.HomeFrag;
 public class UtsavActivity extends AppCompatActivity implements LocationListener {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private int STORAGE_PERMISSION_CODE = 1;
     DrawerLayout drawerLayout;
     LocationManager locationManager;
 
@@ -51,7 +52,15 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-            Toolbar toolbar = findViewById(R.id.toolbar);
+
+        if (ContextCompat.checkSelfPermission(UtsavActivity.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+        } else {
+            requestStoragePermission();
+        }
+
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -122,14 +131,14 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
     }
 
     private void locationClicked() {
-//        locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
-        //Runtime permissions
+
         if (ContextCompat.checkSelfPermission(UtsavActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(UtsavActivity.this, new String[]{
                     Manifest.permission.ACCESS_FINE_LOCATION
             }, 100);
         }
+        Toast.makeText(UtsavActivity.this, "Clicked On location Icon ", Toast.LENGTH_LONG).show();
 
     }
 
@@ -137,11 +146,6 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
         locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         Location location = locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
@@ -185,5 +189,41 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    private void requestStoragePermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(UtsavActivity.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            new AlertDialog.Builder(UtsavActivity.this)
+                    .setTitle("Permission needed")
+                    .setMessage("This permission is needed to download the image")
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ActivityCompat.requestPermissions(UtsavActivity.this,
+                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+                        }
+                    })
+                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .create().show();
+        } else {
+            ActivityCompat.requestPermissions(UtsavActivity.this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+        }
+    }
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == STORAGE_PERMISSION_CODE)  {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(UtsavActivity.this, "Storage Permission GRANTED", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(UtsavActivity.this, "Permission DENIED", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
 
 }
