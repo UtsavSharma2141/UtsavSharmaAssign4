@@ -66,7 +66,7 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
         @SuppressLint("CutPasteId") DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_setting)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -102,7 +102,6 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -110,7 +109,7 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.location:
+            case R.id.utsav_location:
                 locationClicked();
                 showSnackbar();
                 break;
@@ -183,16 +182,16 @@ public class UtsavActivity extends AppCompatActivity implements LocationListener
         if (ActivityCompat.shouldShowRequestPermissionRationale(UtsavActivity.this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             new AlertDialog.Builder(UtsavActivity.this)
-                    .setTitle("Permission needed")
-                    .setMessage("This permission is needed to download the image")
-                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    .setTitle(R.string.permissions_needed)
+                    .setMessage(R.string.pemission_ne2)
+                    .setPositiveButton(R.string.ok5, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             ActivityCompat.requestPermissions(UtsavActivity.this,
                                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
                         }
                     })
-                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    .setNegativeButton(R.string.cancel5, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();

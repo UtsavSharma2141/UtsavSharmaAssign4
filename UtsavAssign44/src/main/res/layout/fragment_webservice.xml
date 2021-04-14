@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/bluesky"
     android:orientation="vertical"
-    tools:context=".ui.slideshow.WebServiceFrag">
+    tools:context=".ui.webservice.WebServiceFrag">
 
     <TextView
         android:id="@+id/utsav_webservice_text"
@@ -16,7 +16,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:paddingBottom="25dp"
-        android:text="This is a WebService Fragment"
+        android:text="@string/webpage_welcome_msg"
         android:textAlignment="center"
         android:textColor="@color/red"
         android:textSize="20sp"
@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ZIP Code"
+        android:text="@string/zip_code_textview"
         android:textStyle="bold"/>
 
     <EditText
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:maxLength="5"
         android:inputType="numberDecimal"
-        android:hint="Enter ZIP Code"
+        android:hint="@string/enter_zip_code_editxt"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
 
@@ -41,13 +41,14 @@
         android:id="@+id/utsav_webservice_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Web Services"
+        android:text="@string/web_services_btn"
+        android:textColor="@color/black"
         tools:ignore="MissingConstraints" />
     <TextView
-        android:id="@+id/txtDisplayWeather"
+        android:id="@+id/utsav_txtDisplayWeather"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Details"
+        android:text="@string/details_textview"
         android:textColor="@color/black"
         android:textSize="24sp" />
 </LinearLayout>

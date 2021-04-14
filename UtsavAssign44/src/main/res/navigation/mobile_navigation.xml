@@ -19,13 +19,8 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="utsav.sharma.n01392141.ui.slideshow.WebServiceFrag"
+        android:name="utsav.sharma.n01392141.ui.webservice.WebServiceFrag"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_webservice" />
 
-    <fragment
-        android:id="@+id/nav_setting"
-        android:name="utsav.sharma.n01392141.SettingFragment"
-        tools:layout="@layout/fragment_setting"
-        android:label="Setting"/>
 </navigation>

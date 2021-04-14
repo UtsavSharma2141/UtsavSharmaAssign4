@@ -1,4 +1,4 @@
-package utsav.sharma.n01392141.ui.slideshow;
+package utsav.sharma.n01392141.ui.webservice;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

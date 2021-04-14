@@ -159,7 +159,6 @@ public class DownloadFrag extends Fragment {
                 String path = params[0];
                 int file_length;
 
-                Log.i("Info: path", path);
                 try {
                     URL url = new URL(path);
                     URLConnection urlConnection = url.openConnection();
@@ -169,12 +168,12 @@ public class DownloadFrag extends Fragment {
                     File new_folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), "myfolder");
                     if (!new_folder.exists()) {
                         if (new_folder.mkdir()) {
-                            Log.i("Info", "Folder succesfully created");
+
                         } else {
-                            Log.i("Info", "Failed to create folder");
+
                         }
                     } else {
-                        Log.i("Info", "Folder already exists");
+
                     }
 
                     File output_file = new File(new_folder, "downloaded_image.jpg");
@@ -191,12 +190,10 @@ public class DownloadFrag extends Fragment {
                         int progress = 100 * total / file_length;
                         publishProgress(progress);
 
-                        Log.i("Info", "Progress: " + Integer.toString(progress));
                     }
                     inputStream.close();
                     outputStream.close();
 
-                    Log.i("Info", "file_length: " + Integer.toString(file_length));
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -217,7 +214,6 @@ public class DownloadFrag extends Fragment {
                 File output_file = new File(folder, "downloaded_image.jpg");
                 String path = output_file.toString();
                 imageView.setImageDrawable(Drawable.createFromPath(path));
-                Log.i("Info", "Path: " + path);
             }
         }
 

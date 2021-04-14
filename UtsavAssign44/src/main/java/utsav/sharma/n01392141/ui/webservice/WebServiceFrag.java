@@ -1,4 +1,4 @@
-package utsav.sharma.n01392141.ui.slideshow;
+package utsav.sharma.n01392141.ui.webservice;
 
 import android.content.DialogInterface;
 import android.os.AsyncTask;
@@ -10,14 +10,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -29,12 +26,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
-import java.util.concurrent.ExecutionException;
 
 import utsav.sharma.n01392141.R;
-import utsav.sharma.n01392141.UtsavActivity;
 
 public class WebServiceFrag extends Fragment {
 
@@ -51,7 +45,7 @@ public class WebServiceFrag extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        txtDisplayWeather = view.findViewById(R.id.txtDisplayWeather);
+        txtDisplayWeather = view.findViewById(R.id.utsav_txtDisplayWeather);
         new ReadJSONFeedTask().execute(
                 "http://extjs.org.cn/extjs/examples/grid/survey.html");
         txtZIP= view.findViewById(R.id.utsav_zip_text);
@@ -62,7 +56,7 @@ public class WebServiceFrag extends Fragment {
             public void onClick(View v) {
 
                 if (txtZIP.getText().toString().trim().equalsIgnoreCase("")) {
-                    txtZIP.setError("This field can not be blank.Please Enter 5 Digit ZIP Code");
+                    txtZIP.setError(getString(R.string.zip_text_error1));
 
                 }
 
@@ -89,7 +83,7 @@ public class WebServiceFrag extends Fragment {
         builder.setIcon(R.drawable.error);
         builder.setTitle(getResources().getString(R.string.Warning_msg));
         builder.setMessage(getResources().getString(R.string.dialogMsg));
-        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.ok2, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -108,7 +102,6 @@ public class WebServiceFrag extends Fragment {
         String url = "https://api.openweathermap.org/data/2.5/weather?";
         url+="zip="+zip;
         url+="&&units=metric&appid=f8bdf1b6771866d52c93f17b99c03b05";
-        Log.d("URL",url);
         new ReadJSONFeedTask().execute(url);
 
 

@@ -25,6 +25,18 @@
     <string name="fgdf">This is snackbar</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu_setting">Settings</string>
+    <string name="download_frag_button">Download</string>
+    <string name="webpage_welcome_msg">This is a WebService Fragment</string>
+    <string name="zip_code_textview">ZIP Code</string>
+    <string name="enter_zip_code_editxt">Enter ZIP Code</string>
+    <string name="web_services_btn">Web Services</string>
+    <string name="details_textview">Details</string>
+    <string name="permissions_needed">Permission needed</string>
+    <string name="pemission_ne2">This permission is needed to download the image</string>
+    <string name="ok5">ok</string>
+    <string name="cancel5">cancel</string>
+    <string name="zip_text_error1">This field can not be blank.Please Enter 5 Digit ZIP Code</string>
+    <string name="ok2">ok</string>
 
     <string-array name="names">
         <item>Flower</item>
