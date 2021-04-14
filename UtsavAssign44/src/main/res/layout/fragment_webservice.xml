@@ -1,22 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bluesky"
+    android:orientation="vertical"
     tools:context=".ui.slideshow.WebServiceFrag">
 
     <TextView
-        android:id="@+id/text_slideshow"
+        android:id="@+id/utsav_webservice_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:paddingBottom="25dp"
+        android:text="This is a WebService Fragment"
         android:textAlignment="center"
+        android:textColor="@color/red"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZIP Code"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/utsav_zip_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:hint="Enter ZIP Code"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/utsav_webservice_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Web Services"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/txtDisplayWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+</LinearLayout>

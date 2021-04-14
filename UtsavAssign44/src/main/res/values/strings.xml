@@ -9,10 +9,13 @@
     <string name="builder_exit_message">(Utsav Sharma N01392141) Do You want to exit from the app? </string>
     <string name="yes_msg">Yes</string>
     <string name="no_msg">No</string>
+    <string name="Warning_msg">Invalid Zip</string>
     <string name="help_website">Help website</string>
     <string name="website1">https://humber.ca/</string>
-    <color name="lightgreen">#90EE90</color>
-    <color name="yellow">#FFFFE0</color>
+    <color name="lightgreen">#F08080</color>
+    <color name="yellow">#FFFACD</color>
+    <color name="bluesky">#87CEFA</color>
+    <string name="dialogMsg">Please Enter a valid ZIP Code of 5 Digits</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Download</string>
