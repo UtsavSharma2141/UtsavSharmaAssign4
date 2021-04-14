@@ -1,3 +1,4 @@
+<!--Utsav Sharma n01392141 section C -->
 <resources>
     <string name="app_name">Utsav Sharma N01392141</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -37,6 +38,8 @@
     <string name="cancel5">cancel</string>
     <string name="zip_text_error1">This field can not be blank.Please Enter 5 Digit ZIP Code</string>
     <string name="ok2">ok</string>
+    <string name="date_download">Date</string>
+    <string name="time_download">Time</string>
 
     <string-array name="names">
         <item>Flower</item>

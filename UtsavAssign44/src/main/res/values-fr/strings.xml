@@ -1,0 +1,49 @@
+<!--Utsav Sharma n01392141 section C -->
+<resources>
+    <string name="app_name">Utsav Sharma N01392141</string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
+    <string name="navigation_drawer_close">Fermer le panneau de navigation</string>
+    <string name="nav_header_title">Utsav Sharma</string>
+    <string name="nav_header_subtitle">utsav.sharma1211@gmail.com</string>
+    <string name="nav_header_desc">En-tête de navigation</string>
+    <string name="action_settings">Emplacement</string>
+    <string name="builder_exit_message">(Utsav Sharma N01392141) Voulez-vous quitter lapplication? </string>
+    <string name="yes_msg">Oui</string>
+    <string name="no_msg">non</string>
+    <string name="Warning_msg">Zip non valide</string>
+    <string name="help_website">Site daide</string>
+    <string name="website1">https://humber.ca/</string>
+    <color name="lightgreen">#F08080</color>
+    <color name="yellow">#FFFACD</color>
+    <color name="bluesky">#87CEFA</color>
+    <string name="dialogMsg">Veuillez entrer un code postal valide de 5 chiffres</string>
+
+    <string name="menu_home">Domicile</string>
+    <string name="menu_gallery">Télécharger</string>
+    <string name="menu_slideshow">Service Web</string>
+    <string name="full_name">tvUtsavSharma</string>
+    <string name="student_id">tvN01392141</string>
+    <string name="fgdf">Cest un snack</string>
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+    <string name="menu_setting">Paramètres</string>
+    <string name="download_frag_button">Télécharger</string>
+    <string name="webpage_welcome_msg">Ceci est un fragment de service Web</string>
+    <string name="zip_code_textview">Code postal</string>
+    <string name="enter_zip_code_editxt">Entrer le code postal</string>
+    <string name="web_services_btn">Services Web</string>
+    <string name="details_textview">Des détails</string>
+    <string name="permissions_needed">Autorisation nécessaire</string>
+    <string name="pemission_ne2">Cette autorisation est nécessaire pour télécharger limage</string>
+    <string name="ok5">daccord</string>
+    <string name="cancel5">Annuler</string>
+    <string name="zip_text_error1">Ce champ ne peut pas être vide.Veuillez entrer le code postal à 5 ​​chiffres</string>
+    <string name="ok2">dccord</string>
+    <string name="date_download">Date</string>
+    <string name="time_download">Temps</string>
+
+    <string-array name="names">
+        <item>Fleur</item>
+        <item>Nature</item>
+        <item>Ciel</item>
+    </string-array>
+</resources>

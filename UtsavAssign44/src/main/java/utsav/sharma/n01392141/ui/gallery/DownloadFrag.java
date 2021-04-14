@@ -1,3 +1,6 @@
+/*
+Utsav Sharma N01392141 Section C
+ */
 package utsav.sharma.n01392141.ui.gallery;
 
 import android.Manifest;
@@ -45,7 +48,6 @@ import utsav.sharma.n01392141.R;
 
 public class DownloadFrag extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
     private int STORAGE_PERMISSION_CODE = 1;
     Spinner nameSpinner;
     ArrayList<String> nameList;

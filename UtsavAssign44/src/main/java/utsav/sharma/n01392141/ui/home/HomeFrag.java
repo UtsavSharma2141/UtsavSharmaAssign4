@@ -1,3 +1,6 @@
+/*
+Utsav Sharma N01392141 Section C
+ */
 package utsav.sharma.n01392141.ui.home;
 
 import android.annotation.SuppressLint;
@@ -22,14 +25,12 @@ import utsav.sharma.n01392141.R;
 
 public class HomeFrag extends Fragment {
 
-    private HomeViewModel homeViewModel;
     TextView textViewDate;
     View view;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+
         Calendar calendar = Calendar.getInstance();
         String currentdate = DateFormat.getDateInstance().format(calendar.getTime());
         View root = inflater.inflate(R.layout.fragment_home, container, false);
